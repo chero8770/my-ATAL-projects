@@ -1,0 +1,52 @@
+# Atal Companion App
+
+Atal Companion is a mobile application developed using **MIT App Inventor** aimed at enhancing learning and experimentation within **Atal Tinkering Labs (ATLs)**. The app acts as an interactive resource sandbox for school students, helping them navigate core technical fields such as Robotics, Electronics, and 3D Printing through organized video tutorials.
+
+## 📱 Features & App Interface
+
+The application layout is divided into structured screens designed to provide a seamless navigation experience:
+
+- **Home Screen (Screen 1):** Features a sleek tech-themed background with primary navigation triggers for the three main tracks: **Robotics**, **Electronics**, and **3D Printing**.
+- **Track Sandboxes (e.g., Screen 2 & Screen 7):** Selecting a category takes the student to a specialized dashboard containing structured tutorial modules:
+  - **Tutorial 1:** Introduces the dedicated software or configuration tools.
+  - **Tutorial 2:** Walks through building an initial basic or baseline model.
+  - **Tutorial 3:** Covers more dynamic, intermediate project implementations.
+- **Integrated Video Player (e.g., Screen 4 & Screen 10):** Uses an embedded `WebViewer` component to stream curated educational YouTube videos directly inside the application, removing the need to navigate away from the app.
+- **Intuitive Back Navigation:** Hardware back button flows logic backwards step-by-step to return to previous nested menus natively.
+
+---
+
+## 🛠️ Tech Stack & Architecture
+
+- **Platform:** Android Mobile Operating System
+- **Development Environment:** MIT App Inventor (Block-Level Visual Programming)
+- **Primary Elements Used:** - `VerticalScrollArrangement` (Layout control)
+  - `Button` UI Elements (Interactive routing)
+  - `WebViewer` Component (Embedded video streaming)
+
+---
+
+## 📂 Project Navigation Structure
+
+The application blocks manage routing through distinct multi-screen configurations:
+
+```text
+               ┌───────────────┐
+               │   Screen 1    │ (Main Dashboard)
+               └───────┬───────┘
+         ┌─────────────┼─────────────┐
+         ▼             ▼             ▼
+   ┌───────────┐ ┌───────────┐ ┌───────────┐
+   │ Robotics  │ │Electronics│ │3D Printing│
+   │ (Screen 2)│ │ (Screen 7)│ │ Dashboard │
+   └─────┬─────┘ └─────┬─────┘ └─────┬─────┘
+         ▼             ▼             ▼
+   ┌───────────┐ ┌───────────┐ ┌───────────┐
+   │Tutorials  │ │Tutorials  │ │Tutorials  │
+   │1, 2, or 3 │ │1, 2, or 3 │ │1, 2, or 3 │
+   └─────┬─────┘ └─────┬─────┘ └─────┬─────┘
+         ▼             ▼             ▼
+   ┌───────────┐ ┌───────────┐ ┌───────────┐
+   │WebViewer  │ │WebViewer  │ │WebViewer  │
+   │ (Screen 4)│ │(Screen 10)│ │ Streaming │
+   └───────────┘ └───────────┘ └───────────┘
